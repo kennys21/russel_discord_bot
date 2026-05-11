@@ -38,8 +38,8 @@ print(f"DEBUG: Token is {os.getenv('DISCORD_TOKEN')}")
 # Filled in by the SyncCord builder when you download this file.
 # Environment variables (.env) take priority over these baked-in values.
 CHAR_NAME = os.getenv("CHAR_NAME", "Russel")
-DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+DISCORD_TOKEN = os.getenv("DISCORD_TOKEN").replace('"', '').replace("'", "").strip() if os.getenv("DISCORD_TOKEN") else None
+GROQ_API_KEY = os.getenv("GROQ_API_KEY").replace('"', '').replace("'", "").strip() if os.getenv("GROQ_API_KEY") else None
 CHAR_PROFILE = {
     "name": "Russel",
     "age": "23",
