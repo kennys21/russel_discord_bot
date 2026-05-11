@@ -32,6 +32,7 @@ def _load_dotenv(path: str = ".env") -> None:
 
 
 _load_dotenv()
+print(f"DEBUG: Token is {os.getenv('DISCORD_TOKEN')}")
 
 # --- BEGIN SYNCCORD INJECTED CONFIG ---
 # Filled in by the SyncCord builder when you download this file.
